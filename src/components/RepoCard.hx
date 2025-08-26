@@ -35,7 +35,7 @@ class RepoCard extends ReactComponent {
     }
     
     private function formatDate(dateString: String): String {
-        var date = new Date(dateString);
+        var date = new js.lib.Date(dateString);
         return date.toLocaleDateString();
     }
 }
