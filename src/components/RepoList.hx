@@ -10,9 +10,14 @@ import services.GitHubApiService.GitHubRepository;
 
 @:css(RepoListCss.use)
 class RepoList extends ReactComponent {
-    @:state var repositories: Array<GitHubRepository> = [];
-    @:state var loading: Bool = true;
-    @:state var error: String = null;
+    public function new(props) {
+        super(props);
+        this.state = {
+            repositories: [],
+            loading: true,
+            error: null
+        };
+    }
     
     override function componentDidMount() {
         loadRepositories();
@@ -48,13 +53,15 @@ class RepoList extends ReactComponent {
             ');
         }
         
+        var repoCards = state.repositories.map(function(repo) {
+            return jsx('<RepoCard key=${repo.id} repository=${repo} />');
+        });
+        
         return jsx('
             <div className="repo-list">
                 <h2>Latest Repositories</h2>
                 <div className="repo-grid">
-                    ${state.repositories.map(function(repo) {
-                        return jsx('<RepoCard key=${repo.id} repository=${repo} />');
-                    })}
+                    ${repoCards}
                 </div>
             </div>
         ');
