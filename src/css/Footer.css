@@ -1,0 +1,20 @@
+/* Footer Component Styling */
+footer {
+  background: linear-gradient(135deg, #16213e, #1a1a2e);
+  color: #a0a0a0;
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 212, 255, 0.3);
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+footer p:first-child {
+  font-weight: 500;
+  color: #00d4ff;
+}

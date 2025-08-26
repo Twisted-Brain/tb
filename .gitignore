@@ -1,0 +1,13 @@
+# Haxe
+*.hxml
+*.log
+*.swf
+
+# JS
+node_modules
+build
+npm-debug.log
+
+# IDE specific
+.vscode
+.idea
