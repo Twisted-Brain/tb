@@ -212,6 +212,8 @@ body {
   height: 120px;
   width: auto;
   transition: transform var(--transition-fast) ease;
+  border: none;
+  background-color: transparent;
 }
 
 .main-logo:hover {

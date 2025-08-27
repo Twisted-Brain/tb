@@ -238,7 +238,8 @@ class BuildMacros {
             "tb_4.png",
             "tb_5.png",
             "hdevm_1.png",
-            "logo.png"
+            "logo.png",
+            "xrd.png"
         ];
         
         if (FileSystem.exists(assetsSourceDir)) {

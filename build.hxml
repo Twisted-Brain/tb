@@ -1,9 +1,6 @@
 # Twisted Brain Pages - Build Configuration
 # Target: JavaScript for GitHub Pages deployment
 
--cp domain
--cp shared
--cp widgets
 -cp platform
 
 -main platform.js.TwistedBrainApp
