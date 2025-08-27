@@ -2,6 +2,7 @@
 # Target: JavaScript for GitHub Pages deployment
 
 -cp platform
+-cp shared
 
 -main platform.js.TwistedBrainApp
 -js build/js/app.js
