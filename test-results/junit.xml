@@ -1,0 +1,2905 @@
+<testsuites id="" name="" tests="150" failures="62" skipped="0" errors="0" time="247.611997">
+<testsuite name="landing-page.spec.js" timestamp="2025-08-27T11:26:29.576Z" hostname="chromium" tests="25" failures="10" skipped="0" time="121.344" errors="0">
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load page successfully with all sections" classname="landing-page.spec.js" time="2.696">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should have proper meta tags for SEO" classname="landing-page.spec.js" time="2.076">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts" classname="landing-page.spec.js" time="2.042">
+<failure message="landing-page.spec.js:63:5 should load critical CSS and fonts" type="FAILURE">
+<![CDATA[  [chromium] › landing-page.spec.js:63:5 › Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts 
+
+    Error: expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not "rgba(0, 0, 0, 0)"
+
+      69 |       
+      70 |       // Should have dark background (not default white)
+    > 71 |       expect(backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
+         |                                   ^
+      72 |       expect(backgroundColor).not.toBe('rgb(255, 255, 255)');
+      73 |       
+      74 |       // Check if custom fonts are loaded
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:71:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-chromium/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly" classname="landing-page.spec.js" time="7.443">
+<failure message="landing-page.spec.js:85:5 should display hero content correctly" type="FAILURE">
+<![CDATA[  [chromium] › landing-page.spec.js:85:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.hero-section').locator('.cta-primary')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('.hero-section').locator('.cta-primary')
+
+
+      100 |       const secondaryCta = heroSection.locator('.cta-secondary');
+      101 |       
+    > 102 |       await expect(primaryCta).toBeVisible();
+          |                                ^
+      103 |       await expect(secondaryCta).toBeVisible();
+      104 |       
+      105 |       // Verify buttons have proper attributes
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:102:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-chromium/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons" classname="landing-page.spec.js" time="12.018">
+<failure message="landing-page.spec.js:110:5 should have working CTA buttons" type="FAILURE">
+<![CDATA[  [chromium] › landing-page.spec.js:110:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons 
+
+    TimeoutError: locator.hover: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.cta-primary')
+
+
+      113 |       
+      114 |       // Test primary CTA hover effect
+    > 115 |       await primaryCta.hover();
+          |                        ^
+      116 |       
+      117 |       // Wait for hover animation
+      118 |       await page.waitForTimeout(500);
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:115:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-chromium/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have animated background elements" classname="landing-page.spec.js" time="2.118">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should have smooth scrolling navigation" classname="landing-page.spec.js" time="2.902">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should trigger scroll animations" classname="landing-page.spec.js" time="2.712">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have interactive feature cards" classname="landing-page.spec.js" time="2.478">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have working social links" classname="landing-page.spec.js" time="2.103">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop" classname="landing-page.spec.js" time="12.857">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - desktop" type="FAILURE">
+<![CDATA[  [chromium] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-desktop-chromium-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-desktop-chromium-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-chromium/landing-page-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-desktop-chromium-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-chromium/landing-page-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-chromium/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop" classname="landing-page.spec.js" time="5.753">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - desktop" type="FAILURE">
+<![CDATA[  [chromium] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-chromium-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-desktop-chromium-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-chromium/hero-section-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-chromium-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-chromium/hero-section-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-chromium/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet" classname="landing-page.spec.js" time="6.755">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - tablet" type="FAILURE">
+<![CDATA[  [chromium] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-chromium-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-tablet-chromium-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-chromium/landing-page-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-chromium-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-chromium/landing-page-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-chromium/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet" classname="landing-page.spec.js" time="5.238">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - tablet" type="FAILURE">
+<![CDATA[  [chromium] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-chromium-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-tablet-chromium-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-chromium/hero-section-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-chromium-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-chromium/hero-section-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-chromium/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile" classname="landing-page.spec.js" time="7.577">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - mobile" type="FAILURE">
+<![CDATA[  [chromium] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-chromium-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-mobile (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-mobile-chromium-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-chromium/landing-page-mobile-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-chromium-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-chromium/landing-page-mobile-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-chromium/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile" classname="landing-page.spec.js" time="17.626">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - mobile" type="FAILURE">
+<![CDATA[  [chromium] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile 
+
+    TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.
+
+      23 |     
+      24 |     // Wait for page to be fully loaded
+    > 25 |     await page.waitForLoadState('networkidle');
+         |                ^
+      26 |     
+      27 |     // Wait for critical assets to load
+      28 |     await page.waitForSelector('.hero-section', { timeout: 10000 });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:25:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-chromium/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should load within performance budget" classname="landing-page.spec.js" time="3.017">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should have good Core Web Vitals" classname="landing-page.spec.js" time="2.566">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should not have console errors" classname="landing-page.spec.js" time="3.563">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper heading hierarchy" classname="landing-page.spec.js" time="2.525">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have alt text for images" classname="landing-page.spec.js" time="2.696">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes" classname="landing-page.spec.js" time="7.147">
+<failure message="landing-page.spec.js:362:5 should have proper link attributes" type="FAILURE">
+<![CDATA[  [chromium] › landing-page.spec.js:362:5 › Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('a[href^="http"]').first()
+    Expected pattern: /noopener/
+    Received string:  ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('a[href^="http"]').first()
+        8 × locator resolved to <a target="_blank" class="cta-button secondary-outline" href="https://github.com/twisted-brain/tb-pages">↵                            View on GitHub↵     …</a>
+          - unexpected value "null"
+
+
+      367 |         const link = externalLinks.nth(i);
+      368 |         await expect(link).toHaveAttribute('target', '_blank');
+    > 369 |         await expect(link).toHaveAttribute('rel', /noopener/);
+          |                            ^
+      370 |       }
+      371 |     });
+      372 |     
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:369:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-chromium/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should be keyboard navigable" classname="landing-page.spec.js" time="2.131">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should be responsive on mobile devices" classname="landing-page.spec.js" time="1.42">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should have touch-friendly interactive elements" classname="landing-page.spec.js" time="1.885">
+</testcase>
+</testsuite>
+<testsuite name="landing-page.spec.js" timestamp="2025-08-27T11:26:29.576Z" hostname="firefox" tests="25" failures="10" skipped="0" time="164.285" errors="0">
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load page successfully with all sections" classname="landing-page.spec.js" time="12.21">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should have proper meta tags for SEO" classname="landing-page.spec.js" time="3.555">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts" classname="landing-page.spec.js" time="2.716">
+<failure message="landing-page.spec.js:63:5 should load critical CSS and fonts" type="FAILURE">
+<![CDATA[  [firefox] › landing-page.spec.js:63:5 › Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts 
+
+    Error: expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not "rgba(0, 0, 0, 0)"
+
+      69 |       
+      70 |       // Should have dark background (not default white)
+    > 71 |       expect(backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
+         |                                   ^
+      72 |       expect(backgroundColor).not.toBe('rgb(255, 255, 255)');
+      73 |       
+      74 |       // Check if custom fonts are loaded
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:71:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-firefox/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly" classname="landing-page.spec.js" time="12.747">
+<failure message="landing-page.spec.js:85:5 should display hero content correctly" type="FAILURE">
+<![CDATA[  [firefox] › landing-page.spec.js:85:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.hero-section').locator('.cta-primary')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('.hero-section').locator('.cta-primary')
+
+
+      100 |       const secondaryCta = heroSection.locator('.cta-secondary');
+      101 |       
+    > 102 |       await expect(primaryCta).toBeVisible();
+          |                                ^
+      103 |       await expect(secondaryCta).toBeVisible();
+      104 |       
+      105 |       // Verify buttons have proper attributes
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:102:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-firefox/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons" classname="landing-page.spec.js" time="17.517">
+<failure message="landing-page.spec.js:110:5 should have working CTA buttons" type="FAILURE">
+<![CDATA[  [firefox] › landing-page.spec.js:110:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons 
+
+    TimeoutError: locator.hover: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.cta-primary')
+
+
+      113 |       
+      114 |       // Test primary CTA hover effect
+    > 115 |       await primaryCta.hover();
+          |                        ^
+      116 |       
+      117 |       // Wait for hover animation
+      118 |       await page.waitForTimeout(500);
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:115:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-firefox/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have animated background elements" classname="landing-page.spec.js" time="12.326">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should have smooth scrolling navigation" classname="landing-page.spec.js" time="6.984">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should trigger scroll animations" classname="landing-page.spec.js" time="7.098">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have interactive feature cards" classname="landing-page.spec.js" time="3.727">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have working social links" classname="landing-page.spec.js" time="4.942">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop" classname="landing-page.spec.js" time="16.369">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - desktop" type="FAILURE">
+<![CDATA[  [firefox] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-desktop-firefox-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-desktop-firefox-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-firefox/landing-page-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-desktop-firefox-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-firefox/landing-page-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-firefox/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop" classname="landing-page.spec.js" time="6.751">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - desktop" type="FAILURE">
+<![CDATA[  [firefox] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-firefox-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-desktop-firefox-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-firefox/hero-section-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-firefox-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-firefox/hero-section-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-firefox/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet" classname="landing-page.spec.js" time="7.286">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - tablet" type="FAILURE">
+<![CDATA[  [firefox] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-firefox-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-tablet-firefox-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-firefox/landing-page-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-firefox-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-firefox/landing-page-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-firefox/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet" classname="landing-page.spec.js" time="6.254">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - tablet" type="FAILURE">
+<![CDATA[  [firefox] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-firefox-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-tablet-firefox-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-firefox/hero-section-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-firefox-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-firefox/hero-section-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-firefox/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile" classname="landing-page.spec.js" time="5.845">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - mobile" type="FAILURE">
+<![CDATA[  [firefox] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-firefox-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-mobile (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-mobile-firefox-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-firefox/landing-page-mobile-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-firefox-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-firefox/landing-page-mobile-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-firefox/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile" classname="landing-page.spec.js" time="5.61">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - mobile" type="FAILURE">
+<![CDATA[  [firefox] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-mobile-firefox-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-mobile (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-mobile-firefox-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-firefox/hero-section-mobile-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-mobile-firefox-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-firefox/hero-section-mobile-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-firefox/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should load within performance budget" classname="landing-page.spec.js" time="4.907">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should have good Core Web Vitals" classname="landing-page.spec.js" time="7.248">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should not have console errors" classname="landing-page.spec.js" time="2.281">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper heading hierarchy" classname="landing-page.spec.js" time="2.209">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have alt text for images" classname="landing-page.spec.js" time="2.641">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes" classname="landing-page.spec.js" time="7.518">
+<failure message="landing-page.spec.js:362:5 should have proper link attributes" type="FAILURE">
+<![CDATA[  [firefox] › landing-page.spec.js:362:5 › Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('a[href^="http"]').first()
+    Expected pattern: /noopener/
+    Received string:  ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('a[href^="http"]').first()
+        9 × locator resolved to <a target="_blank" class="cta-button secondary-outline" href="https://github.com/twisted-brain/tb-pages">↵                            View on GitHub↵     …</a>
+          - unexpected value "null"
+
+
+      367 |         const link = externalLinks.nth(i);
+      368 |         await expect(link).toHaveAttribute('target', '_blank');
+    > 369 |         await expect(link).toHaveAttribute('rel', /noopener/);
+          |                            ^
+      370 |       }
+      371 |     });
+      372 |     
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:369:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-firefox/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should be keyboard navigable" classname="landing-page.spec.js" time="2.809">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should be responsive on mobile devices" classname="landing-page.spec.js" time="1.405">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should have touch-friendly interactive elements" classname="landing-page.spec.js" time="1.33">
+</testcase>
+</testsuite>
+<testsuite name="landing-page.spec.js" timestamp="2025-08-27T11:26:29.576Z" hostname="webkit" tests="25" failures="11" skipped="0" time="174.433" errors="0">
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load page successfully with all sections" classname="landing-page.spec.js" time="8.121">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should have proper meta tags for SEO" classname="landing-page.spec.js" time="4.358">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts" classname="landing-page.spec.js" time="4.392">
+<failure message="landing-page.spec.js:63:5 should load critical CSS and fonts" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:63:5 › Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts 
+
+    Error: expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not "rgba(0, 0, 0, 0)"
+
+      69 |       
+      70 |       // Should have dark background (not default white)
+    > 71 |       expect(backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
+         |                                   ^
+      72 |       expect(backgroundColor).not.toBe('rgb(255, 255, 255)');
+      73 |       
+      74 |       // Check if custom fonts are loaded
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:71:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly" classname="landing-page.spec.js" time="12.293">
+<failure message="landing-page.spec.js:85:5 should display hero content correctly" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:85:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.hero-section').locator('.cta-primary')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('.hero-section').locator('.cta-primary')
+
+
+      100 |       const secondaryCta = heroSection.locator('.cta-secondary');
+      101 |       
+    > 102 |       await expect(primaryCta).toBeVisible();
+          |                                ^
+      103 |       await expect(secondaryCta).toBeVisible();
+      104 |       
+      105 |       // Verify buttons have proper attributes
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:102:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons" classname="landing-page.spec.js" time="17.535">
+<failure message="landing-page.spec.js:110:5 should have working CTA buttons" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:110:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons 
+
+    TimeoutError: locator.hover: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.cta-primary')
+
+
+      113 |       
+      114 |       // Test primary CTA hover effect
+    > 115 |       await primaryCta.hover();
+          |                        ^
+      116 |       
+      117 |       // Wait for hover animation
+      118 |       await page.waitForTimeout(500);
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:115:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have animated background elements" classname="landing-page.spec.js" time="6.436">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should have smooth scrolling navigation" classname="landing-page.spec.js" time="7.748">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should trigger scroll animations" classname="landing-page.spec.js" time="7.798">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have interactive feature cards" classname="landing-page.spec.js" time="6.629">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have working social links" classname="landing-page.spec.js" time="4.387">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop" classname="landing-page.spec.js" time="35.97">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - desktop" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-desktop-webkit-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-desktop-webkit-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-webkit/landing-page-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-desktop-webkit-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-webkit/landing-page-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop" classname="landing-page.spec.js" time="6.448">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - desktop" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-webkit-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-desktop-webkit-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-webkit/hero-section-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-webkit-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-webkit/hero-section-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet" classname="landing-page.spec.js" time="4.998">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - tablet" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-webkit-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-tablet-webkit-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-webkit/landing-page-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-webkit-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-webkit/landing-page-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet" classname="landing-page.spec.js" time="3.703">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - tablet" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-webkit-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-tablet-webkit-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-webkit/hero-section-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-webkit-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-webkit/hero-section-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile" classname="landing-page.spec.js" time="4.17">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - mobile" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-webkit-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-mobile (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-mobile-webkit-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-webkit/landing-page-mobile-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-webkit-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-webkit/landing-page-mobile-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile" classname="landing-page.spec.js" time="3.421">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - mobile" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-mobile-webkit-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-mobile (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-mobile-webkit-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-webkit/hero-section-mobile-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-mobile-webkit-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-webkit/hero-section-mobile-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should load within performance budget" classname="landing-page.spec.js" time="3.329">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should have good Core Web Vitals" classname="landing-page.spec.js" time="7.261">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should not have console errors" classname="landing-page.spec.js" time="2.563">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper heading hierarchy" classname="landing-page.spec.js" time="1.782">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have alt text for images" classname="landing-page.spec.js" time="1.997">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes" classname="landing-page.spec.js" time="7.054">
+<failure message="landing-page.spec.js:362:5 should have proper link attributes" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:362:5 › Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('a[href^="http"]').first()
+    Expected pattern: /noopener/
+    Received string:  ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('a[href^="http"]').first()
+        9 × locator resolved to <a target="_blank" class="cta-button secondary-outline" href="https://github.com/twisted-brain/tb-pages">↵                            View on GitHub↵     …</a>
+          - unexpected value "null"
+
+
+      367 |         const link = externalLinks.nth(i);
+      368 |         await expect(link).toHaveAttribute('target', '_blank');
+    > 369 |         await expect(link).toHaveAttribute('rel', /noopener/);
+          |                            ^
+      370 |       }
+      371 |     });
+      372 |     
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:369:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should be keyboard navigable" classname="landing-page.spec.js" time="7.961">
+<failure message="landing-page.spec.js:373:5 should be keyboard navigable" type="FAILURE">
+<![CDATA[  [webkit] › landing-page.spec.js:373:5 › Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should be keyboard navigable 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator(':focus')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator(':focus')
+
+
+      377 |       // Check if focus is visible
+      378 |       const focusedElement = page.locator(':focus');
+    > 379 |       await expect(focusedElement).toBeVisible();
+          |                                    ^
+      380 |       
+      381 |       // Continue tabbing through interactive elements
+      382 |       for (let i = 0; i < 5; i++) {
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:379:36
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-webkit/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should be responsive on mobile devices" classname="landing-page.spec.js" time="2.368">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should have touch-friendly interactive elements" classname="landing-page.spec.js" time="1.711">
+</testcase>
+</testsuite>
+<testsuite name="landing-page.spec.js" timestamp="2025-08-27T11:26:29.576Z" hostname="Mobile Chrome" tests="25" failures="10" skipped="0" time="131.442" errors="0">
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load page successfully with all sections" classname="landing-page.spec.js" time="3.79">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should have proper meta tags for SEO" classname="landing-page.spec.js" time="2.992">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts" classname="landing-page.spec.js" time="2.054">
+<failure message="landing-page.spec.js:63:5 should load critical CSS and fonts" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › landing-page.spec.js:63:5 › Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts 
+
+    Error: expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not "rgba(0, 0, 0, 0)"
+
+      69 |       
+      70 |       // Should have dark background (not default white)
+    > 71 |       expect(backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
+         |                                   ^
+      72 |       expect(backgroundColor).not.toBe('rgb(255, 255, 255)');
+      73 |       
+      74 |       // Check if custom fonts are loaded
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:71:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly" classname="landing-page.spec.js" time="8.067">
+<failure message="landing-page.spec.js:85:5 should display hero content correctly" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › landing-page.spec.js:85:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.hero-section').locator('.cta-primary')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('.hero-section').locator('.cta-primary')
+
+
+      100 |       const secondaryCta = heroSection.locator('.cta-secondary');
+      101 |       
+    > 102 |       await expect(primaryCta).toBeVisible();
+          |                                ^
+      103 |       await expect(secondaryCta).toBeVisible();
+      104 |       
+      105 |       // Verify buttons have proper attributes
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:102:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons" classname="landing-page.spec.js" time="13.578">
+<failure message="landing-page.spec.js:110:5 should have working CTA buttons" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › landing-page.spec.js:110:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons 
+
+    TimeoutError: locator.hover: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.cta-primary')
+
+
+      113 |       
+      114 |       // Test primary CTA hover effect
+    > 115 |       await primaryCta.hover();
+          |                        ^
+      116 |       
+      117 |       // Wait for hover animation
+      118 |       await page.waitForTimeout(500);
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:115:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have animated background elements" classname="landing-page.spec.js" time="3.218">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should have smooth scrolling navigation" classname="landing-page.spec.js" time="3.265">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should trigger scroll animations" classname="landing-page.spec.js" time="3.144">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have interactive feature cards" classname="landing-page.spec.js" time="2.596">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have working social links" classname="landing-page.spec.js" time="3.046">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop" classname="landing-page.spec.js" time="15.816">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - desktop" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-desktop-Mobile-Chrome-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-desktop-Mobile-Chrome-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Mobile-Chrome/landing-page-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-desktop-Mobile-Chrome-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Mobile-Chrome/landing-page-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop" classname="landing-page.spec.js" time="11.118">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - desktop" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-Mobile-Chrome-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-desktop-Mobile-Chrome-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Chrome/hero-section-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-Mobile-Chrome-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Chrome/hero-section-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet" classname="landing-page.spec.js" time="13.928">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - tablet" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-Mobile-Chrome-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-tablet-Mobile-Chrome-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Chrome/landing-page-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-Mobile-Chrome-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Chrome/landing-page-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet" classname="landing-page.spec.js" time="8.291">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - tablet" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-Mobile-Chrome-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-tablet-Mobile-Chrome-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Chrome/hero-section-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-Mobile-Chrome-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Chrome/hero-section-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile" classname="landing-page.spec.js" time="10.223">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - mobile" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-Mobile-Chrome-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-mobile (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-mobile-Mobile-Chrome-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Chrome/landing-page-mobile-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-Mobile-Chrome-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Chrome/landing-page-mobile-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile" classname="landing-page.spec.js" time="4.202">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - mobile" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-mobile-Mobile-Chrome-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-mobile (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-mobile-Mobile-Chrome-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Chrome/hero-section-mobile-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-mobile-Mobile-Chrome-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Chrome/hero-section-mobile-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should load within performance budget" classname="landing-page.spec.js" time="2.441">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should have good Core Web Vitals" classname="landing-page.spec.js" time="1.684">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should not have console errors" classname="landing-page.spec.js" time="2.265">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper heading hierarchy" classname="landing-page.spec.js" time="1.687">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have alt text for images" classname="landing-page.spec.js" time="1.962">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes" classname="landing-page.spec.js" time="6.916">
+<failure message="landing-page.spec.js:362:5 should have proper link attributes" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › landing-page.spec.js:362:5 › Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('a[href^="http"]').first()
+    Expected pattern: /noopener/
+    Received string:  ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('a[href^="http"]').first()
+        9 × locator resolved to <a target="_blank" class="cta-button secondary-outline" href="https://github.com/twisted-brain/tb-pages">↵                            View on GitHub↵     …</a>
+          - unexpected value "null"
+
+
+      367 |         const link = externalLinks.nth(i);
+      368 |         await expect(link).toHaveAttribute('target', '_blank');
+    > 369 |         await expect(link).toHaveAttribute('rel', /noopener/);
+          |                            ^
+      370 |       }
+      371 |     });
+      372 |     
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:369:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should be keyboard navigable" classname="landing-page.spec.js" time="1.619">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should be responsive on mobile devices" classname="landing-page.spec.js" time="1.742">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should have touch-friendly interactive elements" classname="landing-page.spec.js" time="1.798">
+</testcase>
+</testsuite>
+<testsuite name="landing-page.spec.js" timestamp="2025-08-27T11:26:29.576Z" hostname="Mobile Safari" tests="25" failures="11" skipped="0" time="160.035" errors="0">
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load page successfully with all sections" classname="landing-page.spec.js" time="6.624">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should have proper meta tags for SEO" classname="landing-page.spec.js" time="2.367">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts" classname="landing-page.spec.js" time="2.849">
+<failure message="landing-page.spec.js:63:5 should load critical CSS and fonts" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:63:5 › Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts 
+
+    Error: expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not "rgba(0, 0, 0, 0)"
+
+      69 |       
+      70 |       // Should have dark background (not default white)
+    > 71 |       expect(backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
+         |                                   ^
+      72 |       expect(backgroundColor).not.toBe('rgb(255, 255, 255)');
+      73 |       
+      74 |       // Check if custom fonts are loaded
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:71:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly" classname="landing-page.spec.js" time="8.786">
+<failure message="landing-page.spec.js:85:5 should display hero content correctly" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:85:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.hero-section').locator('.cta-primary')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('.hero-section').locator('.cta-primary')
+
+
+      100 |       const secondaryCta = heroSection.locator('.cta-secondary');
+      101 |       
+    > 102 |       await expect(primaryCta).toBeVisible();
+          |                                ^
+      103 |       await expect(secondaryCta).toBeVisible();
+      104 |       
+      105 |       // Verify buttons have proper attributes
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:102:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons" classname="landing-page.spec.js" time="16.604">
+<failure message="landing-page.spec.js:110:5 should have working CTA buttons" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:110:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons 
+
+    TimeoutError: locator.hover: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.cta-primary')
+
+
+      113 |       
+      114 |       // Test primary CTA hover effect
+    > 115 |       await primaryCta.hover();
+          |                        ^
+      116 |       
+      117 |       // Wait for hover animation
+      118 |       await page.waitForTimeout(500);
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:115:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have animated background elements" classname="landing-page.spec.js" time="3.196">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should have smooth scrolling navigation" classname="landing-page.spec.js" time="3.294">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should trigger scroll animations" classname="landing-page.spec.js" time="3.646">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have interactive feature cards" classname="landing-page.spec.js" time="3.381">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have working social links" classname="landing-page.spec.js" time="3.402">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop" classname="landing-page.spec.js" time="40.092">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - desktop" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop 
+
+    Error: expect(page).toHaveScreenshot(expected) failed
+
+    Timeout:  5000ms
+      Timeout 5000ms exceeded.
+
+      Snapshot: landing-page-desktop.png
+
+    Call log:
+      - Expect "toHaveScreenshot(landing-page-desktop.png)" with timeout 5000ms
+        - generating new stable screenshot expectation
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - waiting 100ms before taking screenshot
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - Timeout 5000ms exceeded.
+
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |                            ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:28
+
+    Tearing down "context" exceeded the test timeout of 30000ms.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop" classname="landing-page.spec.js" time="11.252">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - desktop" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-Mobile-Safari-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-desktop-Mobile-Safari-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Safari/hero-section-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-Mobile-Safari-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Safari/hero-section-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet" classname="landing-page.spec.js" time="6.087">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - tablet" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-Mobile-Safari-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-tablet-Mobile-Safari-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Safari/landing-page-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-Mobile-Safari-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Safari/landing-page-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet" classname="landing-page.spec.js" time="5.307">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - tablet" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-Mobile-Safari-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-tablet-Mobile-Safari-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Safari/hero-section-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-Mobile-Safari-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Safari/hero-section-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile" classname="landing-page.spec.js" time="4.522">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - mobile" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-Mobile-Safari-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-mobile (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-mobile-Mobile-Safari-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Safari/landing-page-mobile-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-Mobile-Safari-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Safari/landing-page-mobile-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile" classname="landing-page.spec.js" time="3.676">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - mobile" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-mobile-Mobile-Safari-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-mobile (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-mobile-Mobile-Safari-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Safari/hero-section-mobile-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-mobile-Mobile-Safari-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Safari/hero-section-mobile-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should load within performance budget" classname="landing-page.spec.js" time="2.723">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should have good Core Web Vitals" classname="landing-page.spec.js" time="6.715">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should not have console errors" classname="landing-page.spec.js" time="2.284">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper heading hierarchy" classname="landing-page.spec.js" time="2.386">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have alt text for images" classname="landing-page.spec.js" time="1.819">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes" classname="landing-page.spec.js" time="6.893">
+<failure message="landing-page.spec.js:362:5 should have proper link attributes" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:362:5 › Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('a[href^="http"]').first()
+    Expected pattern: /noopener/
+    Received string:  ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('a[href^="http"]').first()
+        9 × locator resolved to <a target="_blank" class="cta-button secondary-outline" href="https://github.com/twisted-brain/tb-pages">↵                            View on GitHub↵     …</a>
+          - unexpected value "null"
+
+
+      367 |         const link = externalLinks.nth(i);
+      368 |         await expect(link).toHaveAttribute('target', '_blank');
+    > 369 |         await expect(link).toHaveAttribute('rel', /noopener/);
+          |                            ^
+      370 |       }
+      371 |     });
+      372 |     
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:369:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should be keyboard navigable" classname="landing-page.spec.js" time="7.345">
+<failure message="landing-page.spec.js:373:5 should be keyboard navigable" type="FAILURE">
+<![CDATA[  [Mobile Safari] › landing-page.spec.js:373:5 › Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should be keyboard navigable 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator(':focus')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator(':focus')
+
+
+      377 |       // Check if focus is visible
+      378 |       const focusedElement = page.locator(':focus');
+    > 379 |       await expect(focusedElement).toBeVisible();
+          |                                    ^
+      380 |       
+      381 |       // Continue tabbing through interactive elements
+      382 |       for (let i = 0; i < 5; i++) {
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:379:36
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-Mobile-Safari/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-Mobile-Safari/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-cb7f4-hould-be-keyboard-navigable-Mobile-Safari/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should be responsive on mobile devices" classname="landing-page.spec.js" time="2.383">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should have touch-friendly interactive elements" classname="landing-page.spec.js" time="2.402">
+</testcase>
+</testsuite>
+<testsuite name="landing-page.spec.js" timestamp="2025-08-27T11:26:29.576Z" hostname="Tablet" tests="25" failures="10" skipped="0" time="120.874" errors="0">
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load page successfully with all sections" classname="landing-page.spec.js" time="2.765">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should have proper meta tags for SEO" classname="landing-page.spec.js" time="2.456">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts" classname="landing-page.spec.js" time="1.941">
+<failure message="landing-page.spec.js:63:5 should load critical CSS and fonts" type="FAILURE">
+<![CDATA[  [Tablet] › landing-page.spec.js:63:5 › Twisted Brain Landing Page - E2E Tests › Page Load and Structure › should load critical CSS and fonts 
+
+    Error: expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not "rgba(0, 0, 0, 0)"
+
+      69 |       
+      70 |       // Should have dark background (not default white)
+    > 71 |       expect(backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
+         |                                   ^
+      72 |       expect(backgroundColor).not.toBe('rgb(255, 255, 255)');
+      73 |       
+      74 |       // Check if custom fonts are loaded
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:71:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Tablet/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Tablet/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Tablet/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Tablet/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Tablet/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-2ee1b-load-critical-CSS-and-fonts-Tablet/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly" classname="landing-page.spec.js" time="7.456">
+<failure message="landing-page.spec.js:85:5 should display hero content correctly" type="FAILURE">
+<![CDATA[  [Tablet] › landing-page.spec.js:85:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should display hero content correctly 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.hero-section').locator('.cta-primary')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('.hero-section').locator('.cta-primary')
+
+
+      100 |       const secondaryCta = heroSection.locator('.cta-secondary');
+      101 |       
+    > 102 |       await expect(primaryCta).toBeVisible();
+          |                                ^
+      103 |       await expect(secondaryCta).toBeVisible();
+      104 |       
+      105 |       // Verify buttons have proper attributes
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:102:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Tablet/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Tablet/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Tablet/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Tablet/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Tablet/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-424a0-play-hero-content-correctly-Tablet/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons" classname="landing-page.spec.js" time="11.932">
+<failure message="landing-page.spec.js:110:5 should have working CTA buttons" type="FAILURE">
+<![CDATA[  [Tablet] › landing-page.spec.js:110:5 › Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have working CTA buttons 
+
+    TimeoutError: locator.hover: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.cta-primary')
+
+
+      113 |       
+      114 |       // Test primary CTA hover effect
+    > 115 |       await primaryCta.hover();
+          |                        ^
+      116 |       
+      117 |       // Wait for hover animation
+      118 |       await page.waitForTimeout(500);
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:115:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Tablet/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Tablet/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Tablet/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Tablet/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Tablet/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-15d60-ld-have-working-CTA-buttons-Tablet/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Hero Section Functionality › should have animated background elements" classname="landing-page.spec.js" time="1.779">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should have smooth scrolling navigation" classname="landing-page.spec.js" time="2.997">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Navigation and Scrolling › should trigger scroll animations" classname="landing-page.spec.js" time="2.622">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have interactive feature cards" classname="landing-page.spec.js" time="2.532">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Interactive Elements › should have working social links" classname="landing-page.spec.js" time="2.121">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop" classname="landing-page.spec.js" time="12.072">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - desktop" type="FAILURE">
+<![CDATA[  [Tablet] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-desktop-Tablet-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-desktop-Tablet-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Tablet/landing-page-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Tablet/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Tablet/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Tablet/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-desktop-Tablet-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Tablet/landing-page-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Tablet/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Tablet/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-5d470-h-visual-snapshot---desktop-Tablet/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop" classname="landing-page.spec.js" time="5.708">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - desktop" type="FAILURE">
+<![CDATA[  [Tablet] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - desktop 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-Tablet-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-desktop (image/png) ────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-desktop-Tablet-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Tablet/hero-section-desktop-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Tablet/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Tablet/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Tablet/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-desktop-Tablet-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Tablet/hero-section-desktop-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Tablet/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Tablet/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-05c47--section-snapshot---desktop-Tablet/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet" classname="landing-page.spec.js" time="7.163">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - tablet" type="FAILURE">
+<![CDATA[  [Tablet] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-Tablet-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-tablet-Tablet-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Tablet/landing-page-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Tablet/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Tablet/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Tablet/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-tablet-Tablet-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Tablet/landing-page-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Tablet/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Tablet/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-97064-ch-visual-snapshot---tablet-Tablet/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet" classname="landing-page.spec.js" time="5.224">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - tablet" type="FAILURE">
+<![CDATA[  [Tablet] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - tablet 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-Tablet-darwin.png, writing actual.
+
+      275 |         
+      276 |         const heroSection = page.locator('.hero-section');
+    > 277 |         await expect(heroSection).toHaveScreenshot(`hero-section-${name}.png`, {
+          |         ^
+      278 |           threshold: 0.3,
+      279 |           animations: 'disabled'
+      280 |         });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:277:9
+
+    attachment #1: hero-section-tablet (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/hero-section-tablet-Tablet-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Tablet/hero-section-tablet-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Tablet/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Tablet/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Tablet/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/hero-section-tablet-Tablet-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Tablet/hero-section-tablet-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Tablet/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Tablet/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-de5c4-o-section-snapshot---tablet-Tablet/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile" classname="landing-page.spec.js" time="7.753">
+<failure message="landing-page.spec.js:257:7 should match visual snapshot - mobile" type="FAILURE">
+<![CDATA[  [Tablet] › landing-page.spec.js:257:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match visual snapshot - mobile 
+
+    Error: A snapshot doesn't exist at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-Tablet-darwin.png, writing actual.
+
+      263 |         
+      264 |         // Take full page screenshot
+    > 265 |         await expect(page).toHaveScreenshot(`landing-page-${name}.png`, {
+          |         ^
+      266 |           fullPage: true,
+      267 |           threshold: 0.3, // Allow 30% difference for animations
+      268 |           animations: 'disabled' // Disable animations for consistent screenshots
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:265:9
+
+    attachment #1: landing-page-mobile (image/png) ─────────────────────────────────────────────────
+    Expected: landing-page.spec.js-snapshots/landing-page-mobile-Tablet-darwin.png
+    Received: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Tablet/landing-page-mobile-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Tablet/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Tablet/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Tablet/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/e2e/landing-page.spec.js-snapshots/landing-page-mobile-Tablet-darwin.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Tablet/landing-page-mobile-actual.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Tablet/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Tablet/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-3be72-ch-visual-snapshot---mobile-Tablet/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile" classname="landing-page.spec.js" time="17.481">
+<failure message="landing-page.spec.js:272:7 should match hero section snapshot - mobile" type="FAILURE">
+<![CDATA[  [Tablet] › landing-page.spec.js:272:7 › Twisted Brain Landing Page - E2E Tests › Visual Regression Tests › should match hero section snapshot - mobile 
+
+    TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.
+
+      23 |     
+      24 |     // Wait for page to be fully loaded
+    > 25 |     await page.waitForLoadState('networkidle');
+         |                ^
+      26 |     
+      27 |     // Wait for critical assets to load
+      28 |     await page.waitForSelector('.hero-section', { timeout: 10000 });
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:25:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Tablet/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Tablet/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Tablet/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Tablet/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Tablet/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-0feb4-o-section-snapshot---mobile-Tablet/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should load within performance budget" classname="landing-page.spec.js" time="3.008">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should have good Core Web Vitals" classname="landing-page.spec.js" time="2.997">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Performance Tests › should not have console errors" classname="landing-page.spec.js" time="3.344">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper heading hierarchy" classname="landing-page.spec.js" time="2.445">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have alt text for images" classname="landing-page.spec.js" time="2.48">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes" classname="landing-page.spec.js" time="7.002">
+<failure message="landing-page.spec.js:362:5 should have proper link attributes" type="FAILURE">
+<![CDATA[  [Tablet] › landing-page.spec.js:362:5 › Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should have proper link attributes 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('a[href^="http"]').first()
+    Expected pattern: /noopener/
+    Received string:  ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('a[href^="http"]').first()
+        9 × locator resolved to <a target="_blank" class="cta-button secondary-outline" href="https://github.com/twisted-brain/tb-pages">↵                            View on GitHub↵     …</a>
+          - unexpected value "null"
+
+
+      367 |         const link = externalLinks.nth(i);
+      368 |         await expect(link).toHaveAttribute('target', '_blank');
+    > 369 |         await expect(link).toHaveAttribute('rel', /noopener/);
+          |                            ^
+      370 |       }
+      371 |     });
+      372 |     
+        at /Users/lpm/Repo/tb-pages/tests/e2e/landing-page.spec.js:369:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Tablet/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Tablet/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Tablet/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Tablet/test-failed-1.png]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Tablet/video.webm]]
+
+[[ATTACHMENT|artifacts/landing-page-Twisted-Brain-7397b-have-proper-link-attributes-Tablet/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Accessibility Tests › should be keyboard navigable" classname="landing-page.spec.js" time="2.283">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should be responsive on mobile devices" classname="landing-page.spec.js" time="1.444">
+</testcase>
+<testcase name="Twisted Brain Landing Page - E2E Tests › Mobile Responsiveness › should have touch-friendly interactive elements" classname="landing-page.spec.js" time="1.869">
+</testcase>
+</testsuite>
+</testsuites>

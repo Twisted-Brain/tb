@@ -1,0 +1,34 @@
+{
+  "name": "twisted-brain-pages",
+  "version": "1.0.0",
+  "description": "Twisted Brain - AI + Human DevOps Landing Page built with Haxe",
+  "author": "Twisted Brain Team",
+  "license": "MIT",
+  "main": "platform/js/TwistedBrainApp.hx",
+  "targets": {
+    "js": {
+      "output": "build/js/app.js",
+      "main": "platform.js.TwistedBrainApp"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "build": "haxe build.hxml",
+    "test": "haxe test.hxml",
+    "dev": "haxe build.hxml && npm run serve",
+    "clean": "rm -rf build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twisted-brain/tb-pages"
+  },
+  "keywords": [
+    "haxe",
+    "ai",
+    "devops",
+    "landing-page",
+    "spa",
+    "github-pages"
+  ]
+}

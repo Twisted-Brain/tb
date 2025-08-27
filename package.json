@@ -1,17 +1,42 @@
 {
-  "name": "tb-pages",
+  "name": "twisted-brain-pages",
   "version": "1.0.0",
-  "description": "Twisted Brain Landing Page",
+  "description": "Twisted Brain - AI + Human DevOps Landing Page",
+  "main": "build/js/app.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "build": "haxe build.hxml",
+    "test": "haxe test.hxml && node build/tests/test.js",
+    "serve": "http-server build -p 8080 -c-1",
+    "dev": "npm run build && npm run serve",
+    "clean": "rm -rf build/",
+    "e2e": "playwright test",
+    "e2e:headed": "playwright test --headed",
+    "install:playwright": "playwright install",
+    "lint": "echo 'Haxe linting via haxe compiler warnings'",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "@playwright/test": "^1.40.0",
     "http-server": "^14.1.1",
-    "parcel-bundler": "^1.12.5"
+    "gh-pages": "^6.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twisted-brain/tb-pages.git"
+  },
+  "keywords": [
+    "haxe",
+    "ai",
+    "devops",
+    "landing-page",
+    "spa",
+    "github-pages",
+    "neon",
+    "futuristic"
+  ],
+  "author": "Twisted Brain Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
   }
 }

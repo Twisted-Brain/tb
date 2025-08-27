@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-08-27T11:31:35.943Z",
+  "baseURL": "http://localhost:8080",
+  "nodeVersion": "v24.6.0",
+  "platform": "darwin",
+  "arch": "x64",
+  "ci": false,
+  "environment": "test"
+}

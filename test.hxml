@@ -1,0 +1,25 @@
+# Twisted Brain Pages - Test Configuration
+# Unit and Integration Tests
+
+-cp domain
+-cp shared
+-cp widgets
+-cp platform
+-cp tests
+
+-main tests.TestRunner
+-js build/tests/test.js
+
+# Test-specific settings
+-D js-es=6
+-debug
+-D source-map
+
+# Test libraries (will be added via Lix)
+-lib utest
+
+# Create test output directory
+--macro sys.FileSystem.createDirectory('build/tests')
+
+# Warnings
+-D warn-var-shadowing

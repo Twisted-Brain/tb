@@ -1,6 +1,32 @@
--cp src
--lib react
--main Main
--js dist/app.js
--dce full
--D react_global
+# Twisted Brain Pages - Build Configuration
+# Target: JavaScript for GitHub Pages deployment
+
+-cp domain
+-cp shared
+-cp widgets
+-cp platform
+
+-main platform.js.TwistedBrainApp
+-js build/js/app.js
+
+# JavaScript optimizations
+-D js-es=6
+-D js-unflatten
+-D analyzer-optimize
+
+# Debug information for development
+-debug
+-D source-map
+
+# Warnings and strict compilation
+-D warn-var-shadowing
+-D no-deprecation-warnings
+
+# Output directory creation
+--macro sys.FileSystem.createDirectory('build/js')
+
+# Generate HTML wrapper
+--macro platform.js.BuildMacros.generateIndexHtml()
+
+# Copy required assets
+--macro platform.js.BuildMacros.copyAssets()

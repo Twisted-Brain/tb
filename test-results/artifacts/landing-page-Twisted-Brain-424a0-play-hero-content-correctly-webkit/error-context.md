@@ -1,0 +1,110 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img "Twisted Brain Logo" [ref=e7]
+        - img "Haxe DevOps Logo" [ref=e8]
+      - 'heading "AI + Human: The Future of DevOps" [level=1] [ref=e9]'
+      - paragraph [ref=e10]: Bridging code, AI agents, and human creativity to build, test, and scale with Haxe. Experience the next generation of development workflows where artificial intelligence amplifies human potential.
+      - generic [ref=e11]:
+        - link "Get Started" [ref=e12] [cursor=pointer]:
+          - /url: "#features"
+        - link "View on GitHub" [ref=e13] [cursor=pointer]:
+          - /url: https://github.com/twisted-brain/tb-pages
+    - img [ref=e15]
+  - generic [ref=e21]:
+    - img "Twisted Brain" [ref=e23]
+    - generic [ref=e24]:
+      - heading "We are developers shaping the future with Haxe and AI." [level=2] [ref=e25]
+      - paragraph [ref=e26]: "Twisted Brain pioneers AI-assisted development for multi-target Haxe projects. Our platform enables seamless human-AI collaboration in DevOps cycles: code → test → validate → deploy. We focus on simplicity, automation, and creativity, empowering developers to build once and deploy everywhere while maintaining the human touch that makes software truly exceptional."
+  - generic [ref=e28]:
+    - heading "Key Features" [level=2] [ref=e29]
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - heading "AI DevOps Pipeline" [level=3] [ref=e33]
+        - paragraph [ref=e34]: Automates repetitive coding and testing tasks with intelligent agents that learn from your patterns and preferences.
+      - generic [ref=e35]:
+        - heading "Multi-Target Haxe Development" [level=3] [ref=e37]
+        - paragraph [ref=e38]: Compile once, run everywhere. Deploy to JavaScript, C++, Java, PHP, Lua, and more from a single codebase.
+      - generic [ref=e39]:
+        - heading "Human + AI Collaboration" [level=3] [ref=e41]
+        - paragraph [ref=e42]: AI proposes solutions, humans refine and perfect them. Balance efficiency with creativity for optimal results.
+  - generic [ref=e44]:
+    - heading "See Haxe in Action" [level=2] [ref=e45]
+    - paragraph [ref=e46]: Experience the power of cross-platform development with real examples.
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e50]: Web
+        - paragraph [ref=e51]: Responsive web applications
+      - generic [ref=e52]:
+        - generic [ref=e54]: Mobile
+        - paragraph [ref=e55]: Native mobile experiences
+      - generic [ref=e56]:
+        - generic [ref=e58]: Desktop
+        - paragraph [ref=e59]: Cross-platform desktop apps
+    - generic [ref=e60]:
+      - heading "AI-assisted development cycle" [level=3] [ref=e61]
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: Code
+          - generic [ref=e65]: →
+        - generic [ref=e66]:
+          - generic [ref=e67]: Test
+          - generic [ref=e68]: →
+        - generic [ref=e69]:
+          - generic [ref=e70]: Fix
+          - generic [ref=e71]: →
+        - generic [ref=e72]:
+          - generic [ref=e73]: Deploy
+          - generic [ref=e74]: →
+        - generic [ref=e76]: Repeat
+  - generic [ref=e78]:
+    - heading "Twisted Brain is open-source, transparent, and community-driven." [level=2] [ref=e79]
+    - paragraph [ref=e80]: Join our growing community of developers pushing the boundaries of AI-assisted development.
+    - link "Contribute on GitHub" [ref=e82] [cursor=pointer]:
+      - /url: https://github.com/twisted-brain
+    - generic [ref=e83]:
+      - link "GitHub" [ref=e84]:
+        - /url: https://github.com/twisted-brain
+        - generic [ref=e85]: GitHub
+      - link "Documentation" [ref=e86]:
+        - /url: "#docs"
+        - generic [ref=e87]: Documentation
+  - contentinfo [ref=e88]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - img "Twisted Brain" [ref=e92]
+          - img "Haxe DevOps" [ref=e93]
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - heading "Project" [level=4] [ref=e96]
+            - list [ref=e97]:
+              - listitem [ref=e98]:
+                - link "GitHub" [ref=e99]:
+                  - /url: https://github.com/twisted-brain/tb-pages
+              - listitem [ref=e100]:
+                - link "Documentation" [ref=e101]:
+                  - /url: "#docs"
+              - listitem [ref=e102]:
+                - link "Roadmap" [ref=e103]:
+                  - /url: "#roadmap"
+          - generic [ref=e104]:
+            - heading "Community" [level=4] [ref=e105]
+            - list [ref=e106]:
+              - listitem [ref=e107]:
+                - link "Contribute" [ref=e108]:
+                  - /url: https://github.com/twisted-brain/tb-pages/contribute
+              - listitem [ref=e109]:
+                - link "Issues" [ref=e110]:
+                  - /url: https://github.com/twisted-brain/tb-pages/issues
+              - listitem [ref=e111]:
+                - link "Contact" [ref=e112]:
+                  - /url: "#contact"
+      - generic [ref=e113]:
+        - paragraph [ref=e114]: © 2024 Twisted Brain. Open source under MIT License.
+        - paragraph [ref=e115]: Built with Haxe - The Cross-Platform Toolkit
+```
