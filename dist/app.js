@@ -10,34 +10,33 @@ var Main = function() { };
 Main.main = function() {
 	ReactDOM.render(React.createElement(App,null),window.document.getElementById("app"));
 };
-var React_Component = require("react").Component;
 var App = function(props,context) {
-	React_Component.call(this,props,context);
+	React.Component.call(this,props,context);
 };
-App.__super__ = React_Component;
-App.prototype = $extend(React_Component.prototype,{
+App.__super__ = React.Component;
+App.prototype = $extend(React.Component.prototype,{
 	render: function() {
 		return React.createElement("div",null,[React.createElement(components_Hero,{ key : "hero"}),React.createElement(components_About,{ key : "about"}),React.createElement(components_Features,{ key : "features"}),React.createElement(components_Showcase,{ key : "showcase"}),React.createElement(components_Community,{ key : "community"}),React.createElement(components_Footer,{ key : "footer"})]);
 	}
 });
 var components_About = function(props,context) {
-	React_Component.call(this,props,context);
+	React.Component.call(this,props,context);
 };
-components_About.__super__ = React_Component;
-components_About.prototype = $extend(React_Component.prototype,{
+components_About.__super__ = React.Component;
+components_About.prototype = $extend(React.Component.prototype,{
 	render: function() {
 		var tmp = React.createElement("h2",null,"About Twisted Brain");
 		var tmp1 = React.createElement("p",null,"We are developers shaping the future with Haxe and AI.");
 		var tmp2 = React.createElement("p",null,"AI-assisted development for multi-target Haxe projects, human–AI collaboration in DevOps cycles (code → test → validate → deploy), focusing on simplicity, automation, and creativity.");
-		var tmp3 = React.createElement("img",{ src : "public/assets/tb.png", alt : "Twisted Brain Logo", style : { width : "150px"}});
+		var tmp3 = React.createElement("img",{ src : "assets/tb.png", alt : "Twisted Brain Logo", style : { width : "150px"}});
 		return React.createElement("section",{ id : "about", className : "section"},[tmp,tmp1,tmp2,tmp3]);
 	}
 });
 var components_Community = function(props,context) {
-	React_Component.call(this,props,context);
+	React.Component.call(this,props,context);
 };
-components_Community.__super__ = React_Component;
-components_Community.prototype = $extend(React_Component.prototype,{
+components_Community.__super__ = React.Component;
+components_Community.prototype = $extend(React.Component.prototype,{
 	render: function() {
 		var tmp = React.createElement("h2",null,"Community & Open Source");
 		var tmp1 = React.createElement("p",null,"Twisted Brain is open-source, transparent, and community-driven.");
@@ -46,21 +45,21 @@ components_Community.prototype = $extend(React_Component.prototype,{
 	}
 });
 var components_Features = function(props,context) {
-	React_Component.call(this,props,context);
+	React.Component.call(this,props,context);
 };
-components_Features.__super__ = React_Component;
-components_Features.prototype = $extend(React_Component.prototype,{
+components_Features.__super__ = React.Component;
+components_Features.prototype = $extend(React.Component.prototype,{
 	render: function() {
 		var tmp = React.createElement("h2",null,"Key Features");
-		var tmp1 = React.createElement("img",{ src : "public/assets/hdevm_1.png", alt : "AI DevOps Pipeline"});
+		var tmp1 = React.createElement("img",{ src : "assets/hdevm_1.png", alt : "AI DevOps Pipeline"});
 		var tmp2 = React.createElement("h3",null,"AI DevOps Pipeline");
 		var tmp3 = React.createElement("p",null,"Automates repetitive coding/testing with intelligent agents.");
 		var tmp4 = React.createElement("div",{ className : "feature-card"},[tmp1,tmp2,tmp3]);
-		var tmp1 = React.createElement("img",{ src : "public/assets/xrd.png", alt : "Multi-Target Haxe Development"});
+		var tmp1 = React.createElement("img",{ src : "assets/xrd.png", alt : "Multi-Target Haxe Development"});
 		var tmp2 = React.createElement("h3",null,"Multi-Target Haxe Development");
 		var tmp3 = React.createElement("p",null,"Compile once, run everywhere (JS, C++, Java, PHP, Lua, etc.).");
 		var tmp5 = React.createElement("div",{ className : "feature-card"},[tmp1,tmp2,tmp3]);
-		var tmp1 = React.createElement("img",{ src : "public/assets/tb_3.png", alt : "Human + AI Collaboration"});
+		var tmp1 = React.createElement("img",{ src : "assets/tb_3.png", alt : "Human + AI Collaboration"});
 		var tmp2 = React.createElement("h3",null,"Human + AI Collaboration");
 		var tmp3 = React.createElement("p",null,"AI proposes, humans refine to balance creativity and efficiency.");
 		var tmp6 = React.createElement("div",{ className : "feature-card"},[tmp1,tmp2,tmp3]);
@@ -69,26 +68,26 @@ components_Features.prototype = $extend(React_Component.prototype,{
 	}
 });
 var components_Footer = function(props,context) {
-	React_Component.call(this,props,context);
+	React.Component.call(this,props,context);
 };
-components_Footer.__super__ = React_Component;
-components_Footer.prototype = $extend(React_Component.prototype,{
+components_Footer.__super__ = React.Component;
+components_Footer.prototype = $extend(React.Component.prototype,{
 	render: function() {
 		var tmp = React.createElement("a",{ href : "https://github.com/Twisted-Brain"},"GitHub");
 		var tmp1 = React.createElement("a",{ href : "#"},"Docs");
 		var tmp2 = React.createElement("a",{ href : "#"},"Roadmap");
 		var tmp3 = React.createElement("a",{ href : "#"},"Contact");
 		var tmp4 = React.createElement("div",{ className : "footer-links"},[tmp,tmp1,tmp2,tmp3]);
-		var tmp = React.createElement("img",{ src : "public/assets/logo.png", alt : "Twisted Brain Logo", className : "footer-logo"});
+		var tmp = React.createElement("img",{ src : "assets/logo.png", alt : "Twisted Brain Logo", className : "footer-logo"});
 		var tmp1 = React.createElement("p",null,"© 2024 Twisted Brain DevOps Project");
 		return React.createElement("footer",{ className : "footer"},[tmp4,tmp,tmp1]);
 	}
 });
 var components_Hero = function(props,context) {
-	React_Component.call(this,props,context);
+	React.Component.call(this,props,context);
 };
-components_Hero.__super__ = React_Component;
-components_Hero.prototype = $extend(React_Component.prototype,{
+components_Hero.__super__ = React.Component;
+components_Hero.prototype = $extend(React.Component.prototype,{
 	render: function() {
 		var tmp = React.createElement("h1",null,"AI + Human: The Future of DevOps");
 		var tmp1 = React.createElement("p",null,"Building, testing, and scaling with Haxe, bridging code, AI agents, and human creativity.");
@@ -98,14 +97,14 @@ components_Hero.prototype = $extend(React_Component.prototype,{
 	}
 });
 var components_Showcase = function(props,context) {
-	React_Component.call(this,props,context);
+	React.Component.call(this,props,context);
 };
-components_Showcase.__super__ = React_Component;
-components_Showcase.prototype = $extend(React_Component.prototype,{
+components_Showcase.__super__ = React.Component;
+components_Showcase.prototype = $extend(React.Component.prototype,{
 	render: function() {
 		var tmp = React.createElement("h2",null,"Showcase / Demo");
 		var tmp1 = React.createElement("p",null,"// TODO: REMOVE - Add styled mockups and code cycle diagram here.");
-		var tmp2 = React.createElement("img",{ src : "public/assets/hdevm_4.png", alt : "Showcase Image", style : { width : "80%", marginTop : "2rem"}});
+		var tmp2 = React.createElement("img",{ src : "assets/hdevm_4.png", alt : "Showcase Image", style : { width : "80%", marginTop : "2rem"}});
 		return React.createElement("section",{ id : "showcase", className : "section"},[tmp,tmp1,tmp2]);
 	}
 });
@@ -121,8 +120,6 @@ haxe_iterators_ArrayIterator.prototype = {
 		return this.array[this.current++];
 	}
 };
-var React = require("react");
-var ReactDOM = require("react-dom");
 var $$tre = (typeof Symbol === "function" && Symbol.for && Symbol.for("react.element")) || 0xeac7;
 App.displayName = "App";
 components_About.displayName = "About";

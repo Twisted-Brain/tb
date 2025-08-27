@@ -13,7 +13,7 @@ class Footer extends ReactComponent {
         React.createElement('a', { href: '#' }, 'Roadmap'),
         React.createElement('a', { href: '#' }, 'Contact')
       ]),
-      React.createElement('img', { src: 'public/assets/logo.png', alt: 'Twisted Brain Logo', className: 'footer-logo' }),
+      React.createElement('img', { src: 'assets/logo.png', alt: 'Twisted Brain Logo', className: 'footer-logo' }),
       React.createElement('p', null, '© 2024 Twisted Brain DevOps Project')
     ]);
   }

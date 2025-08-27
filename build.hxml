@@ -3,3 +3,4 @@
 -main Main
 -js dist/app.js
 -dce full
+-D react_global
