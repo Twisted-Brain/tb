@@ -66,7 +66,6 @@ class BuildMacros {
     <link rel="stylesheet" href="./styles.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
     <link rel="icon" type="image/png" href="./favicon.png">
     
     <style>
@@ -270,15 +269,14 @@ class BuildMacros {
             }
         }
         
-        // Copy favicon files (using logo.png as fallback)
+        // Copy favicon files (PNG only - no SVG available)
         if (FileSystem.exists('$assetsSourceDir/logo.png')) {
             try {
                 var logoContent = File.getBytes('$assetsSourceDir/logo.png');
                 File.saveBytes('$targetDir/favicon.png', logoContent);
-                File.saveBytes('$targetDir/favicon.svg', logoContent); // Fallback - should be SVG
-                Context.info('Copied favicon files to build directory', Context.currentPos());
+                Context.info('Copied favicon.png to build directory', Context.currentPos());
             } catch (e: Dynamic) {
-                Context.warning('Failed to copy favicon files: $e', Context.currentPos());
+                Context.warning('Failed to copy favicon.png: $e', Context.currentPos());
             }
         }
         

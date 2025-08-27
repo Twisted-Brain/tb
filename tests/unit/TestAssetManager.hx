@@ -53,7 +53,7 @@ class TestAssetManager extends Test {
      */
     public function testPreloadAssetsValid(): Void {
         var assets = [
-            "assets/images/logo.svg",
+            "assets/logo.png",
             "assets/fonts/orbitron.woff2",
             "assets/styles/critical.css"
         ];
