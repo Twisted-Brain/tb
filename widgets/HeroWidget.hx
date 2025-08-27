@@ -66,8 +66,8 @@ class HeroWidget {
         var content = Browser.document.createDivElement();
         content.className = "hero-content";
         
-        // Add logos
-        content.appendChild(createLogosSection());
+        // Add logo
+        content.appendChild(createLogoSection());
         
         // Add headline
         var headline = Browser.document.createHeadingElement(1);
@@ -88,27 +88,20 @@ class HeroWidget {
     }
     
     /**
-     * Create the logos section
+     * Create the logo section
      */
-    private function createLogosSection(): Element {
-        var logosContainer = Browser.document.createDivElement();
-        logosContainer.className = "hero-logos";
+    private function createLogoSection(): Element {
+        var logoContainer = Browser.document.createDivElement();
+        logoContainer.className = "hero-logo";
         
-        // Left logo
-        var leftLogo = Browser.document.createImageElement();
-        leftLogo.src = configuration.logoLeft;
-        leftLogo.alt = "Twisted Brain Logo";
-        leftLogo.className = "logo-left neon-glow-cyan";
-        logosContainer.appendChild(leftLogo);
+        // Main logo
+        var mainLogo = Browser.document.createImageElement();
+        mainLogo.src = configuration.logo;
+        mainLogo.alt = "Twisted Brain Logo";
+        mainLogo.className = "main-logo";
+        logoContainer.appendChild(mainLogo);
         
-        // Right logo
-        var rightLogo = Browser.document.createImageElement();
-        rightLogo.src = configuration.logoRight;
-        rightLogo.alt = "Haxe DevOps Logo";
-        rightLogo.className = "logo-right neon-glow-orange";
-        logosContainer.appendChild(rightLogo);
-        
-        return logosContainer;
+        return logoContainer;
     }
     
     /**
@@ -179,10 +172,10 @@ class HeroWidget {
             addPulseAnimation(headline);
         }
         
-        // Floating animation for logos
-        var logos = containerElement.querySelectorAll(".logo-left, .logo-right");
-        for (i in 0...logos.length) {
-            addFloatingAnimation(logos[i]);
+        // Floating animation for logo
+        var logo = containerElement.querySelector(".main-logo");
+        if (logo != null) {
+            addFloatingAnimation(logo);
         }
         
         // Circuit flow animations
@@ -288,15 +281,10 @@ class HeroWidget {
             subtext.textContent = configuration.subtext;
         }
         
-        // Update logos
-        var leftLogo = cast(containerElement.querySelector(".logo-left"), js.html.ImageElement);
-        if (leftLogo != null) {
-            leftLogo.src = configuration.logoLeft;
-        }
-        
-        var rightLogo = cast(containerElement.querySelector(".logo-right"), js.html.ImageElement);
-        if (rightLogo != null) {
-            rightLogo.src = configuration.logoRight;
+        // Update logo
+        var mainLogo = cast(containerElement.querySelector(".main-logo"), js.html.ImageElement);
+        if (mainLogo != null) {
+            mainLogo.src = configuration.logo;
         }
         
         // Update CTAs

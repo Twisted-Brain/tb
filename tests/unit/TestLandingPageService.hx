@@ -67,8 +67,7 @@ class TestLandingPageService extends Test {
         // Verify hero properties
         Assert.notNull(hero.headline);
         Assert.notNull(hero.subtext);
-        Assert.notNull(hero.logoLeft);
-        Assert.notNull(hero.logoRight);
+        Assert.notNull(hero.logo);
         Assert.notNull(hero.primaryCta);
         Assert.notNull(hero.secondaryCta);
         

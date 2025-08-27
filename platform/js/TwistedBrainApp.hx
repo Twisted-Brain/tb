@@ -152,9 +152,8 @@ class TwistedBrainApp {
         section.innerHTML = '
             <div class="hero-container">
                 <div class="hero-content">
-                    <div class="hero-logos">
-                        <img src="${heroData.logoLeft}" alt="Twisted Brain Logo" class="logo-left neon-glow-cyan" />
-                        <img src="${heroData.logoRight}" alt="Haxe DevOps Logo" class="logo-right neon-glow-orange" />
+                    <div class="hero-logo">
+                        <img src="${heroData.logo}" alt="Twisted Brain Logo" class="main-logo" />
                     </div>
                     <h1 class="hero-headline neon-text-cyan">${heroData.headline}</h1>
                     <p class="hero-subtext">${heroData.subtext}</p>

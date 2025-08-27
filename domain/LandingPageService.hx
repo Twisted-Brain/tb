@@ -151,8 +151,7 @@ class LandingPageService {
         
         // Hero section assets
         var heroData = LandingPageData.getHeroSectionData();
-        assets.push(heroData.logoLeft);
-        assets.push(heroData.logoRight);
+        assets.push(heroData.logo);
         
         // About section assets
         var aboutData = LandingPageData.getAboutSectionData();

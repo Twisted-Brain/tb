@@ -27,8 +27,7 @@ class LandingPageData {
                 style: "secondary-outline"
             },
             backgroundStyle: "circuit-neon",
-            logoLeft: "assets/tb.png",
-            logoRight: "assets/hdevm.png"
+            logo: "assets/logo.png"
         };
     }
     
@@ -166,8 +165,7 @@ typedef HeroSectionConfig = {
     primaryCta: CtaConfig,
     secondaryCta: CtaConfig,
     backgroundStyle: String,
-    logoLeft: String,
-    logoRight: String
+    logo: String
 }
 
 typedef AboutSectionConfig = {

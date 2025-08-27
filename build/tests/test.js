@@ -349,7 +349,7 @@ class Type {
 Type.__name__ = "Type";
 class domain_LandingPageData {
 	static getHeroSectionData() {
-		return { headline : "AI + Human: The Future of DevOps", subtext : "Bridging code, AI agents, and human creativity to build, test, and scale with Haxe. Experience the next generation of development workflows where artificial intelligence amplifies human potential.", primaryCta : { text : "Get Started", url : "#features", style : "primary-neon"}, secondaryCta : { text : "View on GitHub", url : "https://github.com/twisted-brain/tb-pages", style : "secondary-outline"}, backgroundStyle : "circuit-neon", logoLeft : "assets/tb.png", logoRight : "assets/hdevm.png"};
+		return { headline : "AI + Human: The Future of DevOps", subtext : "Bridging code, AI agents, and human creativity to build, test, and scale with Haxe. Experience the next generation of development workflows where artificial intelligence amplifies human potential.", primaryCta : { text : "Get Started", url : "#features", style : "primary-neon"}, secondaryCta : { text : "View on GitHub", url : "https://github.com/twisted-brain/tb-pages", style : "secondary-outline"}, backgroundStyle : "circuit-neon", logo : "assets/logo.png"};
 	}
 	static getAboutSectionData() {
 		return { tagline : "We are developers shaping the future with Haxe and AI.", description : "Twisted Brain pioneers AI-assisted development for multi-target Haxe projects. Our platform enables seamless human-AI collaboration in DevOps cycles: code → test → validate → deploy. We focus on simplicity, automation, and creativity, empowering developers to build once and deploy everywhere while maintaining the human touch that makes software truly exceptional.", logo : "assets/tb_3.png", additionalAssets : ["assets/tb_4.png","assets/tb_5.png"]};
@@ -420,8 +420,7 @@ class domain_LandingPageService {
 	getCriticalAssetPaths() {
 		let assets = [];
 		let heroData = domain_LandingPageData.getHeroSectionData();
-		assets.push(heroData.logoLeft);
-		assets.push(heroData.logoRight);
+		assets.push(heroData.logo);
 		let aboutData = domain_LandingPageData.getAboutSectionData();
 		assets.push(aboutData.logo);
 		let footerData = domain_LandingPageData.getFooterSectionData();
@@ -2569,224 +2568,223 @@ class tests_unit_TestLandingPageService extends utest_Test {
 		let hero = config.hero;
 		utest_Assert.notNull(hero.headline,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 68, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
 		utest_Assert.notNull(hero.subtext,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 69, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.notNull(hero.logoLeft,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 70, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.notNull(hero.logoRight,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 71, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.notNull(hero.primaryCta,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 72, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.notNull(hero.secondaryCta,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 73, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.isTrue(hero.headline.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 76, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.isTrue(hero.subtext.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 77, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.notNull(hero.primaryCta.text,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 80, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.notNull(hero.primaryCta.url,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 81, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.notNull(hero.primaryCta.style,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 82, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.isTrue(hero.primaryCta.text.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 83, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.isTrue(hero.primaryCta.url.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 84, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.notNull(hero.secondaryCta.text,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 86, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.notNull(hero.secondaryCta.url,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 87, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.notNull(hero.secondaryCta.style,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 88, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.isTrue(hero.secondaryCta.text.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 89, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
-		utest_Assert.isTrue(hero.secondaryCta.url.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 90, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.notNull(hero.logo,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 70, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.notNull(hero.primaryCta,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 71, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.notNull(hero.secondaryCta,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 72, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.isTrue(hero.headline.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 75, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.isTrue(hero.subtext.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 76, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.notNull(hero.primaryCta.text,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 79, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.notNull(hero.primaryCta.url,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 80, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.notNull(hero.primaryCta.style,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 81, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.isTrue(hero.primaryCta.text.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 82, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.isTrue(hero.primaryCta.url.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 83, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.notNull(hero.secondaryCta.text,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 85, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.notNull(hero.secondaryCta.url,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 86, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.notNull(hero.secondaryCta.style,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 87, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.isTrue(hero.secondaryCta.text.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 88, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
+		utest_Assert.isTrue(hero.secondaryCta.url.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 89, className : "tests.unit.TestLandingPageService", methodName : "testHeroConfiguration"});
 	}
 	testAboutConfiguration() {
 		let config = this.landingPageService.getPageConfiguration();
 		let about = config.about;
-		utest_Assert.notNull(about.tagline,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 100, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
-		utest_Assert.notNull(about.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 101, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
-		utest_Assert.notNull(about.logo,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 102, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
-		utest_Assert.isTrue(about.tagline.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 104, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
-		utest_Assert.isTrue(about.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 105, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
-		utest_Assert.isTrue(about.logo.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 106, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
+		utest_Assert.notNull(about.tagline,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 99, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
+		utest_Assert.notNull(about.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 100, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
+		utest_Assert.notNull(about.logo,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 101, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
+		utest_Assert.isTrue(about.tagline.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 103, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
+		utest_Assert.isTrue(about.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 104, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
+		utest_Assert.isTrue(about.logo.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 105, className : "tests.unit.TestLandingPageService", methodName : "testAboutConfiguration"});
 	}
 	testFeaturesConfiguration() {
 		let config = this.landingPageService.getPageConfiguration();
 		let features = config.features;
-		utest_Assert.notNull(features,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 116, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
-		utest_Assert.isTrue(features.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 117, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
+		utest_Assert.notNull(features,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 115, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
+		utest_Assert.isTrue(features.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 116, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
 		let _g = 0;
 		while(_g < features.length) {
 			let feature = features[_g];
 			++_g;
-			utest_Assert.notNull(feature.title,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 121, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
-			utest_Assert.notNull(feature.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 122, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
-			utest_Assert.notNull(feature.icon,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 123, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
-			utest_Assert.notNull(feature.iconColor,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 124, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
-			utest_Assert.isTrue(feature.title.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 126, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
-			utest_Assert.isTrue(feature.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 127, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
-			utest_Assert.isTrue(feature.icon.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 128, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
-			utest_Assert.isTrue(feature.iconColor.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 129, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
+			utest_Assert.notNull(feature.title,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 120, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
+			utest_Assert.notNull(feature.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 121, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
+			utest_Assert.notNull(feature.icon,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 122, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
+			utest_Assert.notNull(feature.iconColor,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 123, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
+			utest_Assert.isTrue(feature.title.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 125, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
+			utest_Assert.isTrue(feature.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 126, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
+			utest_Assert.isTrue(feature.icon.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 127, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
+			utest_Assert.isTrue(feature.iconColor.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 128, className : "tests.unit.TestLandingPageService", methodName : "testFeaturesConfiguration"});
 		}
 	}
 	testShowcaseConfiguration() {
 		let config = this.landingPageService.getPageConfiguration();
 		let showcase = config.showcase;
-		utest_Assert.notNull(showcase.title,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 140, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-		utest_Assert.notNull(showcase.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 141, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-		utest_Assert.notNull(showcase.mockups,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 142, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-		utest_Assert.notNull(showcase.codeCycle,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 143, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-		utest_Assert.isTrue(showcase.title.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 145, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-		utest_Assert.isTrue(showcase.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 146, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-		utest_Assert.isTrue(showcase.mockups.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 147, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.notNull(showcase.title,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 139, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.notNull(showcase.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 140, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.notNull(showcase.mockups,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 141, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.notNull(showcase.codeCycle,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 142, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.isTrue(showcase.title.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 144, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.isTrue(showcase.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 145, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.isTrue(showcase.mockups.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 146, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
 		let _g = 0;
 		let _g1 = showcase.mockups;
 		while(_g < _g1.length) {
 			let mockup = _g1[_g];
 			++_g;
-			utest_Assert.notNull(mockup.platform,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 151, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-			utest_Assert.notNull(mockup.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 152, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-			utest_Assert.isTrue(mockup.platform.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 153, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-			utest_Assert.isTrue(mockup.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 154, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+			utest_Assert.notNull(mockup.platform,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 150, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+			utest_Assert.notNull(mockup.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 151, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+			utest_Assert.isTrue(mockup.platform.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 152, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+			utest_Assert.isTrue(mockup.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 153, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
 		}
-		utest_Assert.notNull(showcase.codeCycle.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 158, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-		utest_Assert.notNull(showcase.codeCycle.steps,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 159, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-		utest_Assert.isTrue(showcase.codeCycle.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 160, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
-		utest_Assert.isTrue(showcase.codeCycle.steps.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 161, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.notNull(showcase.codeCycle.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 157, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.notNull(showcase.codeCycle.steps,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 158, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.isTrue(showcase.codeCycle.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 159, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+		utest_Assert.isTrue(showcase.codeCycle.steps.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 160, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
 		let _g2 = 0;
 		let _g3 = showcase.codeCycle.steps;
 		while(_g2 < _g3.length) {
 			let step = _g3[_g2];
 			++_g2;
-			utest_Assert.isTrue(step.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 164, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
+			utest_Assert.isTrue(step.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 163, className : "tests.unit.TestLandingPageService", methodName : "testShowcaseConfiguration"});
 		}
 	}
 	testCommunityConfiguration() {
 		let config = this.landingPageService.getPageConfiguration();
 		let community = config.community;
-		utest_Assert.notNull(community.statement,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 175, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-		utest_Assert.notNull(community.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 176, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-		utest_Assert.notNull(community.primaryCta,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 177, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-		utest_Assert.notNull(community.socialLinks,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 178, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-		utest_Assert.isTrue(community.statement.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 180, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-		utest_Assert.isTrue(community.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 181, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-		utest_Assert.isTrue(community.socialLinks.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 182, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-		utest_Assert.notNull(community.primaryCta.text,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 185, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-		utest_Assert.notNull(community.primaryCta.url,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 186, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-		utest_Assert.notNull(community.primaryCta.style,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 187, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+		utest_Assert.notNull(community.statement,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 174, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+		utest_Assert.notNull(community.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 175, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+		utest_Assert.notNull(community.primaryCta,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 176, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+		utest_Assert.notNull(community.socialLinks,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 177, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+		utest_Assert.isTrue(community.statement.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 179, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+		utest_Assert.isTrue(community.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 180, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+		utest_Assert.isTrue(community.socialLinks.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 181, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+		utest_Assert.notNull(community.primaryCta.text,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 184, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+		utest_Assert.notNull(community.primaryCta.url,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 185, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+		utest_Assert.notNull(community.primaryCta.style,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 186, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
 		let _g = 0;
 		let _g1 = community.socialLinks;
 		while(_g < _g1.length) {
 			let link = _g1[_g];
 			++_g;
-			utest_Assert.notNull(link.platform,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 191, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-			utest_Assert.notNull(link.url,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 192, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-			utest_Assert.notNull(link.icon,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 193, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-			utest_Assert.isTrue(link.platform.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 194, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-			utest_Assert.isTrue(link.url.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 195, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
-			utest_Assert.isTrue(link.icon.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 196, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+			utest_Assert.notNull(link.platform,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 190, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+			utest_Assert.notNull(link.url,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 191, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+			utest_Assert.notNull(link.icon,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 192, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+			utest_Assert.isTrue(link.platform.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 193, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+			utest_Assert.isTrue(link.url.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 194, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
+			utest_Assert.isTrue(link.icon.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 195, className : "tests.unit.TestLandingPageService", methodName : "testCommunityConfiguration"});
 		}
 	}
 	testFooterConfiguration() {
 		let config = this.landingPageService.getPageConfiguration();
 		let footer = config.footer;
-		utest_Assert.notNull(footer.logo,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 207, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-		utest_Assert.notNull(footer.devOpsLogo,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 208, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-		utest_Assert.notNull(footer.copyright,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 209, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-		utest_Assert.notNull(footer.haxeCredit,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 210, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-		utest_Assert.notNull(footer.links,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 211, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-		utest_Assert.isTrue(footer.logo.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 213, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-		utest_Assert.isTrue(footer.devOpsLogo.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 214, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-		utest_Assert.isTrue(footer.copyright.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 215, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-		utest_Assert.isTrue(footer.haxeCredit.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 216, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-		utest_Assert.isTrue(footer.links.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 217, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+		utest_Assert.notNull(footer.logo,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 206, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+		utest_Assert.notNull(footer.devOpsLogo,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 207, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+		utest_Assert.notNull(footer.copyright,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 208, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+		utest_Assert.notNull(footer.haxeCredit,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 209, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+		utest_Assert.notNull(footer.links,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 210, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+		utest_Assert.isTrue(footer.logo.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 212, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+		utest_Assert.isTrue(footer.devOpsLogo.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 213, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+		utest_Assert.isTrue(footer.copyright.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 214, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+		utest_Assert.isTrue(footer.haxeCredit.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 215, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+		utest_Assert.isTrue(footer.links.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 216, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
 		let _g = 0;
 		let _g1 = footer.links;
 		while(_g < _g1.length) {
 			let category = _g1[_g];
 			++_g;
-			utest_Assert.notNull(category.category,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 221, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-			utest_Assert.notNull(category.items,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 222, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-			utest_Assert.isTrue(category.category.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 223, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-			utest_Assert.isTrue(category.items.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 224, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+			utest_Assert.notNull(category.category,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 220, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+			utest_Assert.notNull(category.items,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 221, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+			utest_Assert.isTrue(category.category.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 222, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+			utest_Assert.isTrue(category.items.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 223, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
 			let _g2 = 0;
 			let _g3 = category.items;
 			while(_g2 < _g3.length) {
 				let item = _g3[_g2];
 				++_g2;
-				utest_Assert.notNull(item.text,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 227, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-				utest_Assert.notNull(item.url,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 228, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-				utest_Assert.isTrue(item.text.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 229, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
-				utest_Assert.isTrue(item.url.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 230, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+				utest_Assert.notNull(item.text,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 226, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+				utest_Assert.notNull(item.url,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 227, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+				utest_Assert.isTrue(item.text.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 228, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
+				utest_Assert.isTrue(item.url.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 229, className : "tests.unit.TestLandingPageService", methodName : "testFooterConfiguration"});
 			}
 		}
 	}
 	testThemeConfiguration() {
 		let config = this.landingPageService.getPageConfiguration();
 		let theme = config.theme;
-		utest_Assert.notNull(theme.colorPalette,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 242, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(theme.typography,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 243, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(theme.effects,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 244, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(theme.colorPalette,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 241, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(theme.typography,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 242, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(theme.effects,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 243, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
 		let colors = theme.colorPalette;
-		utest_Assert.notNull(colors.primary,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 248, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(colors.background,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 249, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(colors.accent,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 250, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(colors.primary.cyan,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 252, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(colors.primary.magenta,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 253, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(colors.primary.orange,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 254, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(colors.primary.blue,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 255, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(colors.primary,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 247, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(colors.background,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 248, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(colors.accent,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 249, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(colors.primary.cyan,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 251, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(colors.primary.magenta,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 252, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(colors.primary.orange,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 253, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(colors.primary.blue,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 254, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
 		let typography = theme.typography;
-		utest_Assert.notNull(typography.headingFont,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 259, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(typography.bodyFont,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 260, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(typography.codeFont,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 261, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(typography.headingFont,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 258, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(typography.bodyFont,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 259, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(typography.codeFont,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 260, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
 		let effects = theme.effects;
-		utest_Assert.notNull(effects.pulseAnimation,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 265, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
-		utest_Assert.notNull(effects.circuitAnimation,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 266, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(effects.pulseAnimation,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 264, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
+		utest_Assert.notNull(effects.circuitAnimation,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 265, className : "tests.unit.TestLandingPageService", methodName : "testThemeConfiguration"});
 	}
 	testMetadataConfiguration() {
 		let config = this.landingPageService.getPageConfiguration();
 		let metadata = config.metadata;
-		utest_Assert.notNull(metadata.title,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 276, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
-		utest_Assert.notNull(metadata.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 277, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
-		utest_Assert.notNull(metadata.keywords,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 278, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
-		utest_Assert.notNull(metadata.author,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 279, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
-		utest_Assert.notNull(metadata.ogImage,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 280, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
-		utest_Assert.notNull(metadata.twitterCard,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 281, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
-		utest_Assert.isTrue(metadata.title.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 283, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
-		utest_Assert.isTrue(metadata.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 284, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
-		utest_Assert.isTrue(metadata.keywords.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 285, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
-		utest_Assert.isTrue(metadata.author.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 286, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
+		utest_Assert.notNull(metadata.title,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 275, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
+		utest_Assert.notNull(metadata.description,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 276, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
+		utest_Assert.notNull(metadata.keywords,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 277, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
+		utest_Assert.notNull(metadata.author,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 278, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
+		utest_Assert.notNull(metadata.ogImage,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 279, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
+		utest_Assert.notNull(metadata.twitterCard,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 280, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
+		utest_Assert.isTrue(metadata.title.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 282, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
+		utest_Assert.isTrue(metadata.description.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 283, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
+		utest_Assert.isTrue(metadata.keywords.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 284, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
+		utest_Assert.isTrue(metadata.author.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 285, className : "tests.unit.TestLandingPageService", methodName : "testMetadataConfiguration"});
 	}
 	testGetCriticalAssetPaths() {
 		let assets = this.landingPageService.getCriticalAssetPaths();
-		utest_Assert.notNull(assets,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 295, className : "tests.unit.TestLandingPageService", methodName : "testGetCriticalAssetPaths"});
-		utest_Assert.isTrue(assets.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 296, className : "tests.unit.TestLandingPageService", methodName : "testGetCriticalAssetPaths"});
+		utest_Assert.notNull(assets,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 294, className : "tests.unit.TestLandingPageService", methodName : "testGetCriticalAssetPaths"});
+		utest_Assert.isTrue(assets.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 295, className : "tests.unit.TestLandingPageService", methodName : "testGetCriticalAssetPaths"});
 		let _g = 0;
 		while(_g < assets.length) {
 			let asset = assets[_g];
 			++_g;
-			utest_Assert.notNull(asset,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 300, className : "tests.unit.TestLandingPageService", methodName : "testGetCriticalAssetPaths"});
-			utest_Assert.isTrue(asset.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 301, className : "tests.unit.TestLandingPageService", methodName : "testGetCriticalAssetPaths"});
+			utest_Assert.notNull(asset,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 299, className : "tests.unit.TestLandingPageService", methodName : "testGetCriticalAssetPaths"});
+			utest_Assert.isTrue(asset.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 300, className : "tests.unit.TestLandingPageService", methodName : "testGetCriticalAssetPaths"});
 		}
 	}
 	testValidateSectionConfigurationValid() {
 		let heroResult = this.landingPageService.validateSectionConfiguration("hero");
-		utest_Assert.isTrue(heroResult.isValid,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 311, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationValid"});
+		utest_Assert.isTrue(heroResult.isValid,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 310, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationValid"});
 		let featuresResult = this.landingPageService.validateSectionConfiguration("features");
-		utest_Assert.isTrue(featuresResult.isValid,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 315, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationValid"});
+		utest_Assert.isTrue(featuresResult.isValid,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 314, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationValid"});
 		let communityResult = this.landingPageService.validateSectionConfiguration("community");
-		utest_Assert.isTrue(communityResult.isValid,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 319, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationValid"});
+		utest_Assert.isTrue(communityResult.isValid,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 318, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationValid"});
 	}
 	testValidateSectionConfigurationInvalid() {
 		let invalidSectionResult = this.landingPageService.validateSectionConfiguration("invalid");
-		utest_Assert.isFalse(invalidSectionResult.isValid,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 328, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationInvalid"});
-		utest_Assert.isTrue(invalidSectionResult.issues.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 329, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationInvalid"});
+		utest_Assert.isFalse(invalidSectionResult.isValid,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 327, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationInvalid"});
+		utest_Assert.isTrue(invalidSectionResult.issues.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 328, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationInvalid"});
 		let emptySectionResult = this.landingPageService.validateSectionConfiguration("");
-		utest_Assert.isFalse(emptySectionResult.isValid,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 333, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationInvalid"});
+		utest_Assert.isFalse(emptySectionResult.isValid,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 332, className : "tests.unit.TestLandingPageService", methodName : "testValidateSectionConfigurationInvalid"});
 	}
 	testGetNavigationStructure() {
 		let navigation = this.landingPageService.getNavigationStructure();
-		utest_Assert.notNull(navigation,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 342, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
-		utest_Assert.notNull(navigation.sections,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 343, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
-		utest_Assert.isTrue(navigation.sections.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 344, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
-		utest_Assert.notNull(navigation.scrollBehavior,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 345, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
-		utest_Assert.isTrue(navigation.offsetTop >= 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 346, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+		utest_Assert.notNull(navigation,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 341, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+		utest_Assert.notNull(navigation.sections,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 342, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+		utest_Assert.isTrue(navigation.sections.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 343, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+		utest_Assert.notNull(navigation.scrollBehavior,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 344, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+		utest_Assert.isTrue(navigation.offsetTop >= 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 345, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
 		let _g = 0;
 		let _g1 = navigation.sections;
 		while(_g < _g1.length) {
 			let section = _g1[_g];
 			++_g;
-			utest_Assert.notNull(section.id,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 350, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
-			utest_Assert.notNull(section.label,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 351, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
-			utest_Assert.isTrue(section.id.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 352, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
-			utest_Assert.isTrue(section.label.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 353, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
-			utest_Assert.isTrue(section.order > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 354, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+			utest_Assert.notNull(section.id,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 349, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+			utest_Assert.notNull(section.label,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 350, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+			utest_Assert.isTrue(section.id.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 351, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+			utest_Assert.isTrue(section.label.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 352, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+			utest_Assert.isTrue(section.order > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 353, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
 		}
 		let _g2 = [];
 		let _g3 = 0;
@@ -2797,31 +2795,31 @@ class tests_unit_TestLandingPageService extends utest_Test {
 			_g2.push(section.label);
 		}
 		let labels = _g2;
-		utest_Assert.isTrue(labels.indexOf("Home") >= 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 359, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
-		utest_Assert.isTrue(labels.indexOf("About") >= 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 360, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
-		utest_Assert.isTrue(labels.indexOf("Features") >= 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 361, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+		utest_Assert.isTrue(labels.indexOf("Home") >= 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 358, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+		utest_Assert.isTrue(labels.indexOf("About") >= 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 359, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
+		utest_Assert.isTrue(labels.indexOf("Features") >= 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 360, className : "tests.unit.TestLandingPageService", methodName : "testGetNavigationStructure"});
 	}
 	testEdgeCases() {
 		let config1 = this.landingPageService.getPageConfiguration();
 		let config2 = this.landingPageService.getPageConfiguration();
-		utest_Assert.equals(config1.hero.headline,config2.hero.headline,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 372, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
-		utest_Assert.equals(config1.about.tagline,config2.about.tagline,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 373, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
-		utest_Assert.equals(config1.features.length,config2.features.length,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 374, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
+		utest_Assert.equals(config1.hero.headline,config2.hero.headline,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 371, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
+		utest_Assert.equals(config1.about.tagline,config2.about.tagline,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 372, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
+		utest_Assert.equals(config1.features.length,config2.features.length,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 373, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
 		let assets1 = this.landingPageService.getCriticalAssetPaths();
 		let assets2 = this.landingPageService.getCriticalAssetPaths();
-		utest_Assert.equals(assets1.length,assets2.length,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 380, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
+		utest_Assert.equals(assets1.length,assets2.length,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 379, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
 		let nav1 = this.landingPageService.getNavigationStructure();
 		let nav2 = this.landingPageService.getNavigationStructure();
-		utest_Assert.equals(nav1.sections.length,nav2.sections.length,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 386, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
-		utest_Assert.equals(nav1.scrollBehavior,nav2.scrollBehavior,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 387, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
-		utest_Assert.equals(nav1.offsetTop,nav2.offsetTop,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 388, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
+		utest_Assert.equals(nav1.sections.length,nav2.sections.length,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 385, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
+		utest_Assert.equals(nav1.scrollBehavior,nav2.scrollBehavior,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 386, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
+		utest_Assert.equals(nav1.offsetTop,nav2.offsetTop,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 387, className : "tests.unit.TestLandingPageService", methodName : "testEdgeCases"});
 	}
 	testConfigurationImmutability() {
 		let config = this.landingPageService.getPageConfiguration();
 		let originalHeadline = config.hero.headline;
 		config.hero.headline = "Modified Headline";
 		let freshConfig = this.landingPageService.getPageConfiguration();
-		utest_Assert.equals(originalHeadline,freshConfig.hero.headline,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 403, className : "tests.unit.TestLandingPageService", methodName : "testConfigurationImmutability"});
+		utest_Assert.equals(originalHeadline,freshConfig.hero.headline,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 402, className : "tests.unit.TestLandingPageService", methodName : "testConfigurationImmutability"});
 	}
 	testPerformance() {
 		let startTime = HxOverrides.now() / 1000;
@@ -2831,13 +2829,13 @@ class tests_unit_TestLandingPageService extends utest_Test {
 			let config = this.landingPageService.getPageConfiguration();
 			let assets = this.landingPageService.getCriticalAssetPaths();
 			let navigation = this.landingPageService.getNavigationStructure();
-			utest_Assert.isTrue(config.hero.headline.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 419, className : "tests.unit.TestLandingPageService", methodName : "testPerformance"});
-			utest_Assert.isTrue(assets.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 420, className : "tests.unit.TestLandingPageService", methodName : "testPerformance"});
-			utest_Assert.isTrue(navigation.sections.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 421, className : "tests.unit.TestLandingPageService", methodName : "testPerformance"});
+			utest_Assert.isTrue(config.hero.headline.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 418, className : "tests.unit.TestLandingPageService", methodName : "testPerformance"});
+			utest_Assert.isTrue(assets.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 419, className : "tests.unit.TestLandingPageService", methodName : "testPerformance"});
+			utest_Assert.isTrue(navigation.sections.length > 0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 420, className : "tests.unit.TestLandingPageService", methodName : "testPerformance"});
 		}
 		let endTime = HxOverrides.now() / 1000;
 		let duration = endTime - startTime;
-		utest_Assert.isTrue(duration < 1.0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 428, className : "tests.unit.TestLandingPageService", methodName : "testPerformance"});
+		utest_Assert.isTrue(duration < 1.0,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 427, className : "tests.unit.TestLandingPageService", methodName : "testPerformance"});
 	}
 	testMemoryUsage() {
 		let configs = [];
@@ -2850,12 +2848,12 @@ class tests_unit_TestLandingPageService extends utest_Test {
 		while(_g1 < configs.length) {
 			let config = configs[_g1];
 			++_g1;
-			utest_Assert.notNull(config,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 444, className : "tests.unit.TestLandingPageService", methodName : "testMemoryUsage"});
-			utest_Assert.notNull(config.hero,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 445, className : "tests.unit.TestLandingPageService", methodName : "testMemoryUsage"});
-			utest_Assert.notNull(config.about,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 446, className : "tests.unit.TestLandingPageService", methodName : "testMemoryUsage"});
+			utest_Assert.notNull(config,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 443, className : "tests.unit.TestLandingPageService", methodName : "testMemoryUsage"});
+			utest_Assert.notNull(config.hero,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 444, className : "tests.unit.TestLandingPageService", methodName : "testMemoryUsage"});
+			utest_Assert.notNull(config.about,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 445, className : "tests.unit.TestLandingPageService", methodName : "testMemoryUsage"});
 		}
 		configs = null;
-		utest_Assert.isTrue(true,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 453, className : "tests.unit.TestLandingPageService", methodName : "testMemoryUsage"});
+		utest_Assert.isTrue(true,null,{ fileName : "tests/unit/TestLandingPageService.hx", lineNumber : 452, className : "tests.unit.TestLandingPageService", methodName : "testMemoryUsage"});
 	}
 	__initializeUtest__() {
 		let init = super.__initializeUtest__();
