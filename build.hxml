@@ -1,0 +1,5 @@
+-cp src
+-lib react
+-main Main
+-js dist/app.js
+-dce full
